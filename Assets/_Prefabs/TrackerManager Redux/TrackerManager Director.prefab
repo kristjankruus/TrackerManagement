@@ -202,7 +202,7 @@ GameObject:
   - component: {fileID: 114386688280969190}
   - component: {fileID: 114842107288269194}
   m_Layer: 0
-  m_Name: TurnSignal Director
+  m_Name: TrackerManager Director
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2598,6 +2598,7 @@ MonoBehaviour:
   widthInMeters: 2.2
   colorTint: {r: 1, g: 1, b: 1, a: 1}
   useChaperoneColor: 0
+  canvasText: {fileID: 0}
   enableRenderModel: 0
   renderModelPath: 
   renderModelColor: {r: 1, g: 1, b: 1, a: 1}
@@ -3124,6 +3125,7 @@ MonoBehaviour:
   widthInMeters: 2
   colorTint: {r: 1, g: 1, b: 1, a: 1}
   useChaperoneColor: 0
+  canvasText: {fileID: 0}
   enableRenderModel: 0
   renderModelPath: 
   renderModelColor: {r: 1, g: 1, b: 1, a: 1}
@@ -3253,6 +3255,7 @@ MonoBehaviour:
   hideMainWindowToggle: {fileID: 0}
   useChapColorToggle: {fileID: 114193587809268002}
   onlyShowInDashToggle: {fileID: 114449986354408916}
+  showBatteryToggle: {fileID: 0}
   disableLinkToggle: {fileID: 0}
   rightLinkToggle: {fileID: 0}
   leftLinkToggle: {fileID: 0}

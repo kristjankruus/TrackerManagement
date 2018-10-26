@@ -785,7 +785,7 @@ GameObject:
   - component: {fileID: 4390720530980658}
   - component: {fileID: 114459010727463944}
   m_Layer: 9
-  m_Name: TurnSignal Menu Rig
+  m_Name: TrackerManager Menu Rig
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1208,11 +1208,11 @@ Camera:
   m_TargetEye: 3
   m_HDR: 1
   m_AllowMSAA: 1
+  m_AllowDynamicResolution: 0
   m_ForceIntoRT: 0
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
-  m_StereoMirrorMode: 0
 --- !u!114 &114021187528849668
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2021,15 +2021,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e63f8abb6ab90e84ea3ba358eb1e9e83, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  menuRigCamera: {fileID: 0}
   prefs: {fileID: 0}
   scaleSlider: {fileID: 114448277379096130}
   opacitySlider: {fileID: 114653760415614174}
-  twistRateSlider: {fileID: 114847524043955176}
-  petalSlider: {fileID: 114976853704348156}
+  heightSlider: {fileID: 0}
   startWithVRToggle: {fileID: 114599003332117182}
+  hideMainWindowToggle: {fileID: 0}
   useChapColorToggle: {fileID: 114978638596012174}
-  tieTwistToggle: {fileID: 114475651448291578}
   onlyShowInDashToggle: {fileID: 114801169083149338}
+  showBatteryToggle: {fileID: 0}
+  disableLinkToggle: {fileID: 0}
+  rightLinkToggle: {fileID: 0}
+  leftLinkToggle: {fileID: 0}
+  flipSidesToggle: {fileID: 0}
 --- !u!114 &114462187870471642
 MonoBehaviour:
   m_ObjectHideFlags: 1

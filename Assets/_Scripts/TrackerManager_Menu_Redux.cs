@@ -11,8 +11,6 @@ public class TrackerManager_Menu_Redux : MonoBehaviour
 
 	[Space(10)]
 
-	public Slider scaleSlider;
-	public Slider opacitySlider;
 	public Slider heightSlider;
 
 	[Space(5)]
@@ -41,8 +39,6 @@ public class TrackerManager_Menu_Redux : MonoBehaviour
 
 	public void SetUIValues()
 	{	
-		scaleSlider.value = prefs.Scale;
-		opacitySlider.value = prefs.Opacity;
 		heightSlider.value = prefs.Height;
 
 		startWithVRToggle.isOn = prefs.StartWithSteamVR;
