@@ -9,10 +9,6 @@ public class TrackerManager_Menu_Redux : MonoBehaviour
 	
 	public TrackerManager_Prefs_Handler prefs;
 
-	[Space(10)]
-
-	public Slider heightSlider;
-
 	[Space(5)]
 	
 	public Toggle startWithVRToggle;
@@ -38,9 +34,7 @@ public class TrackerManager_Menu_Redux : MonoBehaviour
 	}
 
 	public void SetUIValues()
-	{	
-		heightSlider.value = prefs.Height;
-
+	{
 		startWithVRToggle.isOn = prefs.StartWithSteamVR;
 		hideMainWindowToggle.isOn = prefs.HideMainWindow;
 

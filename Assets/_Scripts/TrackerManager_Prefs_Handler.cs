@@ -15,45 +15,6 @@ public class TrackerManager_Prefs_Handler : MonoBehaviour
         _fileName = fileName;
     }
 
-	public float Scale 
-    {
-        get 
-        {
-            return prefs.Scale;
-        }
-        set 
-        {
-            prefs.Scale = value;
-            Save();
-        }
-    }
-
-    public float Opacity 
-    {
-        get 
-        {
-            return prefs.Opacity;
-        }
-        set
-        {
-            prefs.Opacity = value;
-            Save();
-        }
-    }
-
-    public float Height 
-    {
-        get 
-        {
-            return prefs.Height;
-        }
-        set 
-        {
-            prefs.Height = value;
-            Save();
-        }
-    }
-
     public float FollowSpeed 
     {
         get 
@@ -67,56 +28,6 @@ public class TrackerManager_Prefs_Handler : MonoBehaviour
 
             prefs.FollowSpeed = value;
             Save();
-        }
-    }
-
-    public int TwistRate 
-    {
-        get
-        {
-            return prefs.TwistRate;
-        }
-        set
-        {
-            prefs.TwistRate = value;
-            Save();
-        }
-    }
-
-    public float TwistRateF
-    {
-        get 
-        {
-            return (float) TwistRate;
-        }
-        set 
-        {
-            TwistRate = (int) value;
-        }
-    }
-
-    public int Petals 
-    {
-        get 
-        {
-            return prefs.PetalCount;
-        }
-        set 
-        {
-            prefs.PetalCount = value;
-            Save();
-        }
-    }
-
-    public float PetalsF
-    {
-        get 
-        {
-            return (float) Petals;
-        }
-        set 
-        {
-            Petals = (int) value;
         }
     }
 
@@ -372,17 +283,11 @@ public enum TrackerManagerPrefsLinkDevice
     Left
 }
 
-[System.Serializable] public class TrackerManagerPrefs 
+[Serializable] public class TrackerManagerPrefs 
 {
     public Int32 lastEditTime = 0;
 
-    public float Scale = 2f;
-    public float Opacity = 0.03f;
-    public float Height = 0f;
     public float FollowSpeed = 1f;
-
-    public int TwistRate = 10;
-    public int PetalCount = 6;
 
     public bool StartWithSteamVR = true;
     public bool HideMainWindow = false;
