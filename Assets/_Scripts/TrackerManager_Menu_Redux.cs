@@ -8,14 +8,14 @@ public class TrackerManager_Menu_Redux : MonoBehaviour
 	[Space(10)]
 	
 	public TrackerManager_Prefs_Handler prefs;
+    public TrackerManager_Menu_BatteryLevel batteryMenu;
 
-	[Space(5)]
+    [Space(5)]
 	
 	public Toggle startWithVRToggle;
 	public Toggle hideMainWindowToggle;
 	public Toggle useChapColorToggle;
 	public Toggle onlyShowInDashToggle;
-    public Toggle showBatteryToggle;
 
     [Space(5)]
 
@@ -42,15 +42,15 @@ public class TrackerManager_Menu_Redux : MonoBehaviour
 
 		onlyShowInDashToggle.isOn = prefs.OnlyShowInDashboard;
 
-        showBatteryToggle.isOn = prefs.ShowBatteryPercentage;
-
         disableLinkToggle.isOn = prefs.LinkDevice == TrackerManagerPrefsLinkDevice.None;
 
 		rightLinkToggle.isOn = prefs.LinkDevice == TrackerManagerPrefsLinkDevice.Right;
 		leftLinkToggle.isOn = prefs.LinkDevice == TrackerManagerPrefsLinkDevice.Left;
 
 		flipSidesToggle.isOn = prefs.FlipSides;
-	}
+
+        batteryMenu.SetUIValues();
+    }
 
 	public void ResetSettings()
 	{

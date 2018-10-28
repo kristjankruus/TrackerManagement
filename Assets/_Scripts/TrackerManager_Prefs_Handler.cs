@@ -122,6 +122,71 @@ public class TrackerManager_Prefs_Handler : MonoBehaviour
         }
     }
 
+    public bool ShowWhenBatteryLow
+    {
+        get
+        {
+            return prefs.ShowWhenBatteryLow;
+        }
+        set
+        {
+            prefs.ShowWhenBatteryLow = value;
+            Save();
+        }
+    }
+
+    public bool NotifyWhenBatteryLow
+    {
+        get
+        {
+            return prefs.NotifyWhenBatteryLow;
+        }
+        set
+        {
+            prefs.NotifyWhenBatteryLow = value;
+            Save();
+        }
+    }
+
+    public int BatteryLowThreshold
+    {
+        get
+        {
+            return prefs.BatteryLowThreshold;
+        }
+        set
+        {
+            prefs.BatteryLowThreshold = value;
+            Save();
+        }
+    }
+
+    public Color BatteryLabelColor
+    {
+        get
+        {
+            return prefs.BatteryLabelColor;
+        }
+        set
+        {
+            prefs.BatteryLabelColor = value;
+            Save();
+        }
+    }
+
+    public float BatteryLabelOpacity
+    {
+        get
+        {
+            return prefs.BatteryLabelOpacity;
+        }
+        set
+        {
+            prefs.BatteryLabelOpacity = value;
+            Save();
+        }
+    }
+
     public TrackerManagerPrefsLinkDevice LinkDevice 
     {
         get 
@@ -295,9 +360,16 @@ public enum TrackerManagerPrefsLinkDevice
     public bool FollowPlayerHeadset = false;
     public bool UseChaperoneColor = false;
     public bool LinkOpacityWithTwist = false;
-
     public bool OnlyShowInDashboard = false;
+
+    #region batteryMenu
     public bool ShowBatteryPercentage = false;
+    public bool ShowWhenBatteryLow = false;
+    public bool NotifyWhenBatteryLow = false;
+    public int BatteryLowThreshold = 15;
+    public Color BatteryLabelColor = Color.red;
+    public float BatteryLabelOpacity = 1.0f;
+    #endregion
 
     public TrackerManagerPrefsLinkDevice LinkDevice = TrackerManagerPrefsLinkDevice.None;
     public bool FlipSides = false;
