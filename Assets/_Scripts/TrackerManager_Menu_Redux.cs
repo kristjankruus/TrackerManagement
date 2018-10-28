@@ -8,7 +8,7 @@ public class TrackerManager_Menu_Redux : MonoBehaviour
 	[Space(10)]
 	
 	public TrackerManager_Prefs_Handler prefs;
-    public TrackerManager_Menu_BatteryLevel batteryMenu;
+    public TrackerManager_Menu_BatteryMenu batteryMenu;
 
     [Space(5)]
 	

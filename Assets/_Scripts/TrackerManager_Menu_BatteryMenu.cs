@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
 
-public class TrackerManager_Menu_BatteryLevel : MonoBehaviour
+public class TrackerManager_Menu_BatteryMenu : MonoBehaviour
 {
     public TrackerManager_Prefs_Handler prefs;
     [Space(10)]

@@ -169,7 +169,9 @@ public class TrackerManager_Prefs_Handler : MonoBehaviour
         }
         set
         {
+            var opacity = prefs.BatteryLabelColor.a;
             prefs.BatteryLabelColor = value;
+            prefs.BatteryLabelColor.a = opacity;
             Save();
         }
     }
@@ -178,11 +180,11 @@ public class TrackerManager_Prefs_Handler : MonoBehaviour
     {
         get
         {
-            return prefs.BatteryLabelOpacity;
+            return prefs.BatteryLabelColor.a;
         }
         set
         {
-            prefs.BatteryLabelOpacity = value;
+            prefs.BatteryLabelColor.a = value;
             Save();
         }
     }
@@ -368,7 +370,6 @@ public enum TrackerManagerPrefsLinkDevice
     public bool NotifyWhenBatteryLow = false;
     public int BatteryLowThreshold = 15;
     public Color BatteryLabelColor = Color.red;
-    public float BatteryLabelOpacity = 1.0f;
     #endregion
 
     public TrackerManagerPrefsLinkDevice LinkDevice = TrackerManagerPrefsLinkDevice.None;
