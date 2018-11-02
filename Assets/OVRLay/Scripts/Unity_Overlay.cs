@@ -263,6 +263,11 @@ public class Unity_Overlay : MonoBehaviour
 		}
 	}
 
+    void CancelBatteryLevel()
+    {
+        CancelInvoke("GetBatteryLevel");
+    }
+
     void GetBatteryLevel()
     {
         var batteryLevel = ovrHandler.GetBatteryLevel(overlay.overlayTransformTrackedDeviceRelativeIndex);

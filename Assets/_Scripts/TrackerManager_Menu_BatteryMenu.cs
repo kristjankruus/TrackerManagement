@@ -43,7 +43,7 @@ public class TrackerManager_Menu_BatteryMenu : MonoBehaviour
     {
         colorHandle.color = Color.HSVToRGB(colorSlider.value, 1, 1);
         prefs.BatteryLabelColor = colorHandle.color;
-	OpacitySliderValueChange();
+	    OpacitySliderValueChange();
     }
 
     public void OpacitySliderValueChange()
