@@ -67,8 +67,9 @@ public partial class TrackerManager_Director : MonoBehaviour
 	void Update() 
 	{
 		UpdateFPS();
-		
-		SetWindowSize();
+        UpdateFPS();
+
+        SetWindowSize();
 	}
 
 	public void UpdateFPS()
