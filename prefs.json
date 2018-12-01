@@ -1,5 +1,5 @@
 {
-    "lastEditTime": 1541112104,
+    "lastEditTime": 1543678522,
     "FollowSpeed": 1.0,
     "StartWithSteamVR": true,
     "HideMainWindow": false,
@@ -7,15 +7,15 @@
     "UseChaperoneColor": false,
     "LinkOpacityWithTwist": false,
     "OnlyShowInDashboard": false,
-    "ShowBatteryPercentage": true,
-    "ShowWhenBatteryLow": true,
+    "ShowBatteryPercentage": false,
+    "ShowWhenBatteryLow": false,
     "NotifyWhenBatteryLow": false,
-    "BatteryLowThreshold": 2,
+    "BatteryLowThreshold": 15,
     "BatteryLabelColor": {
-        "r": 0.0,
-        "g": 1.0,
-        "b": 0.5744857788085938,
-        "a": 0.17378218472003938
+        "r": 1.0,
+        "g": 0.0,
+        "b": 0.0,
+        "a": 1.0
     },
     "LinkDevice": 0,
     "FlipSides": false

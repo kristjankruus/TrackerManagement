@@ -54,6 +54,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4910622142967298}
+  - component: {fileID: 114125836794843226}
   m_Layer: 0
   m_Name: Pogo Tracker
   m_TagString: Untagged
@@ -549,6 +550,22 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1168213858959112}
   m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &114125836794843226
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1293855933084254}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 602be065163e8e34f820734582b4cbfd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Output: {fileID: 1723246300235666}
+  Input1: {fileID: 1423206582263750}
+  Input2: {fileID: 1809672365031994}
+  Input3: {fileID: 1970286605215636}
+  Input4: {fileID: 1168213858959112}
 --- !u!136 &136292723747476862
 CapsuleCollider:
   m_ObjectHideFlags: 1

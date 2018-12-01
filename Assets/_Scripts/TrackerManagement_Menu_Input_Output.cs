@@ -1,24 +1,23 @@
-﻿using System;
-using UnityEngine;
-using UnityEngine.UI;
+﻿using UnityEngine;
 
 public class TrackerManagement_Menu_Input_Output : MonoBehaviour
 {
-    public Text Input1Active;
-    public Text Input2Active;
-    public Text Input3Active;
-    public Text Input4Active;
-    public Toggle outputToggle;    
+    public TrackerManager_Menu_Pogo_Simulate SimulateInput1;
+    public TrackerManager_Menu_Pogo_Simulate SimulateInput2;
+    public TrackerManager_Menu_Pogo_Simulate SimulateInput3;
+    public TrackerManager_Menu_Pogo_Simulate SimulateInput4;
+    public TrackerManager_Menu_Pogo_Simulate SimulateOutput;
+
+    public TrackerManager_Tracker Tracker;
 
     // Use this for initialization
     void Start()
     {
-        outputToggle.onValueChanged.AddListener(delegate { OutputToggleValueChange(); });
-    }
-
-    private void OutputToggleValueChange()
-    {
-        throw new NotImplementedException();
+        SimulateInput1.TrackerPin = Tracker.Input1;
+        SimulateInput2.TrackerPin = Tracker.Input2;
+        SimulateInput3.TrackerPin = Tracker.Input3;
+        SimulateInput4.TrackerPin = Tracker.Input4;
+        SimulateOutput.TrackerPin = Tracker.Output;
     }
 
     // Update is called once per frame
