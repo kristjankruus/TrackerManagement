@@ -89,8 +89,9 @@ public class Unity_SteamVR_Handler : MonoBehaviour
 
 		if(hmdObject)
 			poseHandler.SetTransformToTrackedDevice(hmdObject.transform, poseHandler.hmdIndex);
-
-		if(poseHandler.rightActive && rightTrackerObj)
+        Debug.Log(poseHandler.rightActive);
+        Debug.Log(rightTrackerObj);
+        if (poseHandler.rightActive && rightTrackerObj)
 		{
 			rightTrackerObj.SetActive(true);
 			poseHandler.SetTransformToTrackedDevice(rightTrackerObj.transform, poseHandler.rightIndex);
@@ -142,9 +143,9 @@ public class Unity_SteamVR_Handler : MonoBehaviour
 				Debug.Log("Connected to SteamVR!");
 				
 				onSteamVRConnect.Invoke();
-				ovrHandler.onDashboardChange += OnDashboardChange;
+				ovrHandler.onDashboardChange += OnDashboardChange;               
 
-				return true;
+                return true;
 			}		
 		}
 		else

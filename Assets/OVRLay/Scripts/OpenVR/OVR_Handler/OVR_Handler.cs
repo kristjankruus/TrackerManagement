@@ -1,4 +1,5 @@
-using System.Collections;
+using System.Collections.Generic;
+using System.Text;
 using UnityEngine;
 using Valve.VR;
 
@@ -7,18 +8,18 @@ public partial class OVR_Handler : System.IDisposable
     public delegate void VREventHandler(VREvent_t e);
 
     public VREventHandler onVREvent;
-    private void DefaultEventHandler(VREvent_t e){}
+    private void DefaultEventHandler(VREvent_t e) { }
 
-    public OVR_Handler() 
+    public OVR_Handler()
     {
         onVREvent += DefaultEventHandler;
     }
 
     public void UpdateAll()
     {
-        while(PollNextEvent(ref pEvent))
+        while (PollNextEvent(ref pEvent))
             DigestEvent(pEvent);
-        
+
         poseHandler.UpdatePoses();
         overlayHandler.UpdateOverlays();
     }
@@ -31,8 +32,8 @@ public partial class OVR_Handler : System.IDisposable
         _VRSystem = OpenVR.Init(ref error, _applicationType);
 
         bool result = !ErrorCheck(error);
-        
-        if(result)
+
+        if (result)
         {
             GetOpenVRExistingInterfaces();
             onOpenVRChange.Invoke(true);
@@ -49,6 +50,23 @@ public partial class OVR_Handler : System.IDisposable
 
         var batteryLevel = VRSystem.GetFloatTrackedDeviceProperty(deviceId, ETrackedDeviceProperty.Prop_DeviceBatteryPercentage_Float, ref error);
         return batteryLevel;
+    }
+
+    public Dictionary<int, string> GetTrackers()
+    {
+        Dictionary<int, string> trackers = new Dictionary<int, string>();
+        for (int i = 0; i <= 16; i++)
+        {
+            var deviceClass = VRSystem.GetTrackedDeviceClass((uint)i);
+            if (deviceClass == ETrackedDeviceClass.GenericTracker)
+            {
+                ETrackedPropertyError error = new ETrackedPropertyError();
+                StringBuilder builder = new StringBuilder();
+                VRSystem.GetStringTrackedDeviceProperty((uint)i, ETrackedDeviceProperty.Prop_SerialNumber_String, builder, 10000, ref error);
+                trackers.Add(i, builder.ToString());
+            }
+        }
+        return trackers;
     }
 
     public void GetOpenVRExistingInterfaces()
@@ -85,7 +103,7 @@ public partial class OVR_Handler : System.IDisposable
     {
         bool err = (error != EVRInitError.None);
 
-        if(err)
+        if (err)
             Debug.Log("VR Error: " + OpenVR.GetStringForHmdError(error));
 
         return err;
@@ -104,7 +122,7 @@ public partial class OVR_Handler : System.IDisposable
 
     public void SafeDispose()
     {
-        if(_instance != null)
+        if (_instance != null)
             return;
         _instance = null;
     }

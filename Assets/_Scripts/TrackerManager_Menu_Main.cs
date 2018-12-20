@@ -8,13 +8,15 @@ public class TrackerManager_Menu_Main : MonoBehaviour
     public RectTransform BatterySettingsMenu;
     public RectTransform TrackerRolesMenu;
     public RectTransform FullBodyMenu;
-    public RectTransform PogoPinMenu;
+    public TrackerManager_Menu_Pogo_Pin PogoPinMenu;
     [Space(10)]
     public Button GeneralSettingsButton;
     public Button BatteryManagementButton;
     public Button TrackerRolesButton;
     public Button FullBodyButton;
     public Button PogoPinButton;
+    [Space(10)]
+    public GameObject BackButton;
 
     private void Start()
     {
@@ -49,6 +51,8 @@ public class TrackerManager_Menu_Main : MonoBehaviour
     {
         SetMenusInactive();
         TrackerRolesMenu.gameObject.SetActive(true);
+        SetBackButtonActive();
+        gameObject.SetActive(false);
     }
 
     private void SetFullBodySettingsActive()
@@ -61,5 +65,13 @@ public class TrackerManager_Menu_Main : MonoBehaviour
     {
         SetMenusInactive();
         PogoPinMenu.gameObject.SetActive(true);
+        PogoPinMenu.SetActive();
+        SetBackButtonActive();
+        gameObject.SetActive(false);
+    }
+
+    private void SetBackButtonActive()
+    {
+        BackButton.SetActive(true);
     }
 }
