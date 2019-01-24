@@ -1,6 +1,4 @@
-﻿using UnityEngine;
-
-public class TrackerManagement_Menu_Input_Output : MonoBehaviour
+﻿public class TrackerManagement_Menu_Input_Output : SubMenu
 {
     public TrackerManager_Menu_Pogo_Simulate SimulateInput1;
     public TrackerManager_Menu_Pogo_Simulate SimulateInput2;

@@ -1,20 +1,21 @@
 ﻿using UnityEngine;
 
-public class TrackerManager_Menu_Pogo_Pin : MonoBehaviour
+public class Tracker_Selection : MonoBehaviour
 {
     public RectTransform Content;
     public TrackerManager_Menu_Tracker_Selection TrackerSelection;
-    public TrackerManagement_Menu_Input_Output InputOutputMenu;
+    public SubMenu SubMenu;
     public OVR_Handler ovrHandler = OVR_Handler.instance;
 
     public void SetActive()
     {
+        Debug.Log("ju");
         int counter = 0;
         foreach (var tracker in ovrHandler.GetTrackers())
         {
             var selection = Instantiate(TrackerSelection, Vector3.zero, Quaternion.identity);
             //inputOutputMenu.SetTracker(tracker.Key);
-            selection.SubMenu = InputOutputMenu;
+            selection.SubMenu = SubMenu;
             selection.TrackerId = tracker.Key;
             selection.Text.text = tracker.Value;
             selection.gameObject.GetComponent<Transform>().SetParent(Content);

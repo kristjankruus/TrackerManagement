@@ -6,7 +6,7 @@ public class TrackerManager_Menu_Tracker_Selection : MonoBehaviour
     public Button Button;
     public Text Text;
     public int TrackerId;
-    public TrackerManagement_Menu_Input_Output SubMenu { get; set; }
+    public SubMenu SubMenu { get; set; }
 
     void Start()
     {
