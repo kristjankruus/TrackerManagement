@@ -89,6 +89,7 @@ public class Unity_SteamVR_Handler : MonoBehaviour
 
 		if(hmdObject)
 			poseHandler.SetTransformToTrackedDevice(hmdObject.transform, poseHandler.hmdIndex);
+		Debug.Log(ovrHandler.VRSystem.GetControllerRoleForTrackedDeviceIndex(0));
         if (poseHandler.rightActive && rightTrackerObj)
 		{
 			rightTrackerObj.SetActive(true);
