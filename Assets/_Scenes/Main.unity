@@ -1433,7 +1433,6 @@ Transform:
   - {fileID: 842344133}
   - {fileID: 1339795615}
   - {fileID: 1160788796}
-  - {fileID: 1790518103}
   m_Father: {fileID: 49679440}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2121,6 +2120,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 369830477}
+  - component: {fileID: 369830478}
   m_Layer: 9
   m_Name: Tracker Roles Menu
   m_TagString: Untagged
@@ -2149,6 +2149,18 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &369830478
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 369830476}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1d506bffc0c548489c3e34c4b8787da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &374960100
 GameObject:
   m_ObjectHideFlags: 0
@@ -3690,38 +3702,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 616456728}
   m_CullTransparentMesh: 0
---- !u!84 &649600573
-RenderTexture:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: Overlay RenderTexture
-  m_ImageContentsHash:
-    serializedVersion: 2
-    Hash: 00000000000000000000000000000000
-  m_ForcedFallbackFormat: 4
-  m_DownscaleFallback: 0
-  m_Width: 1280
-  m_Height: 1000
-  m_AntiAliasing: 1
-  m_DepthFormat: 2
-  m_ColorFormat: 7
-  m_MipMap: 0
-  m_GenerateMips: 1
-  m_SRGB: 1
-  m_UseDynamicScale: 0
-  m_BindMS: 0
-  m_TextureSettings:
-    serializedVersion: 2
-    m_FilterMode: 1
-    m_Aniso: 1
-    m_MipBias: 0
-    m_WrapU: 1
-    m_WrapV: 1
-    m_WrapW: 1
-  m_Dimension: 2
-  m_VolumeDepth: 1
 --- !u!1 &691451854
 GameObject:
   m_ObjectHideFlags: 0
@@ -3931,32 +3911,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 697209394}
   m_CullTransparentMesh: 0
---- !u!21 &704305738
-Material:
-  serializedVersion: 6
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: Legacy Shaders/Diffuse
-  m_Shader: {fileID: 7, guid: 0000000000000000f000000000000000, type: 0}
-  m_ShaderKeywords: 
-  m_LightmapFlags: 4
-  m_EnableInstancingVariants: 0
-  m_DoubleSidedGI: 0
-  m_CustomRenderQueue: -1
-  stringTagMap: {}
-  disabledShaderPasses: []
-  m_SavedProperties:
-    serializedVersion: 3
-    m_TexEnvs:
-    - _MainTex:
-        m_Texture: {fileID: 649600573}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    m_Floats: []
-    m_Colors:
-    - _Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1 &709392503
 GameObject:
   m_ObjectHideFlags: 0
@@ -4238,38 +4192,6 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.ScrollRect+ScrollRectEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
---- !u!84 &802121311
-RenderTexture:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: Overlay RenderTexture
-  m_ImageContentsHash:
-    serializedVersion: 2
-    Hash: 00000000000000000000000000000000
-  m_ForcedFallbackFormat: 4
-  m_DownscaleFallback: 0
-  m_Width: 1200
-  m_Height: 700
-  m_AntiAliasing: 1
-  m_DepthFormat: 2
-  m_ColorFormat: 7
-  m_MipMap: 0
-  m_GenerateMips: 1
-  m_SRGB: 1
-  m_UseDynamicScale: 0
-  m_BindMS: 0
-  m_TextureSettings:
-    serializedVersion: 2
-    m_FilterMode: 1
-    m_Aniso: 1
-    m_MipBias: 0
-    m_WrapU: 1
-    m_WrapV: 1
-    m_WrapW: 1
-  m_Dimension: 2
-  m_VolumeDepth: 1
 --- !u!1 &810611673
 GameObject:
   m_ObjectHideFlags: 0
@@ -4541,7 +4463,7 @@ MonoBehaviour:
   steamVRHandlerPrefab: {fileID: 385247157}
   autoUpdateOverlay: 1
   simulateInEditor: 0
-  overlayTexture: {fileID: 1355370739}
+  overlayTexture: {fileID: 2008999150}
   cameraForTexture: {fileID: 925602069}
   renderTexWidthOverride: 1280
   renderTexHeightOverride: 747
@@ -7302,7 +7224,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1160788796
 Transform:
   m_ObjectHideFlags: 0
@@ -7334,13 +7256,13 @@ MonoBehaviour:
   steamVRHandlerPrefab: {fileID: 385247157}
   autoUpdateOverlay: 1
   simulateInEditor: 0
-  overlayTexture: {fileID: 802121311}
-  cameraForTexture: {fileID: 1260397795}
+  overlayTexture: {fileID: 1600277206}
+  cameraForTexture: {fileID: 925602069}
   renderTexWidthOverride: 1200
   renderTexHeightOverride: 700
   dontForceRenderTexture: 1
   dashboardThumbnailTexture: {fileID: 0}
-  highQualityRenderTex: 0
+  highQualityRenderTex: 1
   cameraForTextureWidthOverride: 0
   cameraForTextureHeightOverride: 0
   opacity: 1
@@ -8178,38 +8100,6 @@ MonoBehaviour:
     m_TypeName: UnityEngine.UI.Toggle+ToggleEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
   m_IsOn: 0
---- !u!84 &1307294188
-RenderTexture:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: Overlay RenderTexture
-  m_ImageContentsHash:
-    serializedVersion: 2
-    Hash: 00000000000000000000000000000000
-  m_ForcedFallbackFormat: 4
-  m_DownscaleFallback: 0
-  m_Width: 1280
-  m_Height: 1000
-  m_AntiAliasing: 1
-  m_DepthFormat: 2
-  m_ColorFormat: 7
-  m_MipMap: 0
-  m_GenerateMips: 1
-  m_SRGB: 1
-  m_UseDynamicScale: 0
-  m_BindMS: 0
-  m_TextureSettings:
-    serializedVersion: 2
-    m_FilterMode: 1
-    m_Aniso: 1
-    m_MipBias: 0
-    m_WrapU: 1
-    m_WrapV: 1
-    m_WrapW: 1
-  m_Dimension: 2
-  m_VolumeDepth: 1
 --- !u!1 &1336449332
 GameObject:
   m_ObjectHideFlags: 0
@@ -8424,7 +8314,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1339795615
 Transform:
   m_ObjectHideFlags: 0
@@ -8456,7 +8346,7 @@ MonoBehaviour:
   steamVRHandlerPrefab: {fileID: 385247157}
   autoUpdateOverlay: 1
   simulateInEditor: 0
-  overlayTexture: {fileID: 1307294188}
+  overlayTexture: {fileID: 1420408686}
   cameraForTexture: {fileID: 1260397795}
   renderTexWidthOverride: 1280
   renderTexHeightOverride: 1000
@@ -8613,38 +8503,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1351008292}
   m_CullTransparentMesh: 0
---- !u!84 &1355370739
-RenderTexture:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: Overlay RenderTexture
-  m_ImageContentsHash:
-    serializedVersion: 2
-    Hash: 00000000000000000000000000000000
-  m_ForcedFallbackFormat: 4
-  m_DownscaleFallback: 0
-  m_Width: 1280
-  m_Height: 747
-  m_AntiAliasing: 8
-  m_DepthFormat: 2
-  m_ColorFormat: 7
-  m_MipMap: 0
-  m_GenerateMips: 1
-  m_SRGB: 1
-  m_UseDynamicScale: 0
-  m_BindMS: 0
-  m_TextureSettings:
-    serializedVersion: 2
-    m_FilterMode: 2
-    m_Aniso: 1
-    m_MipBias: 0
-    m_WrapU: 1
-    m_WrapV: 1
-    m_WrapW: 1
-  m_Dimension: 2
-  m_VolumeDepth: 1
 --- !u!1 &1377758658
 GameObject:
   m_ObjectHideFlags: 0
@@ -9165,6 +9023,38 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1418513723}
   m_CullTransparentMesh: 0
+--- !u!84 &1420408686
+RenderTexture:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Overlay RenderTexture
+  m_ImageContentsHash:
+    serializedVersion: 2
+    Hash: 00000000000000000000000000000000
+  m_ForcedFallbackFormat: 4
+  m_DownscaleFallback: 0
+  m_Width: 1280
+  m_Height: 1000
+  m_AntiAliasing: 1
+  m_DepthFormat: 2
+  m_ColorFormat: 7
+  m_MipMap: 0
+  m_GenerateMips: 1
+  m_SRGB: 1
+  m_UseDynamicScale: 0
+  m_BindMS: 0
+  m_TextureSettings:
+    serializedVersion: 2
+    m_FilterMode: 1
+    m_Aniso: 1
+    m_MipBias: 0
+    m_WrapU: 1
+    m_WrapV: 1
+    m_WrapW: 1
+  m_Dimension: 2
+  m_VolumeDepth: 1
 --- !u!1001 &1421404525
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9339,166 +9229,6 @@ RectTransform:
     type: 3}
   m_PrefabInstance: {fileID: 1421404525}
   m_PrefabAsset: {fileID: 0}
---- !u!43 &1425505625
-Mesh:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: 
-  serializedVersion: 9
-  m_SubMeshes:
-  - serializedVersion: 2
-    firstByte: 0
-    indexCount: 6
-    topology: 0
-    baseVertex: 0
-    firstVertex: 0
-    vertexCount: 4
-    localAABB:
-      m_Center: {x: 0, y: 0, z: 0}
-      m_Extent: {x: 0.5, y: 0.390625, z: 0}
-  m_Shapes:
-    vertices: []
-    shapes: []
-    channels: []
-    fullWeights: []
-  m_BindPose: []
-  m_BoneNameHashes: 
-  m_RootBoneNameHash: 0
-  m_MeshCompression: 0
-  m_IsReadable: 1
-  m_KeepVertices: 1
-  m_KeepIndices: 1
-  m_IndexFormat: 0
-  m_IndexBuffer: 000001000200000002000300
-  m_VertexData:
-    serializedVersion: 2
-    m_VertexCount: 4
-    m_Channels:
-    - stream: 0
-      offset: 0
-      format: 0
-      dimension: 3
-    - stream: 0
-      offset: 12
-      format: 0
-      dimension: 3
-    - stream: 0
-      offset: 0
-      format: 0
-      dimension: 0
-    - stream: 0
-      offset: 0
-      format: 0
-      dimension: 0
-    - stream: 0
-      offset: 24
-      format: 0
-      dimension: 2
-    - stream: 0
-      offset: 0
-      format: 0
-      dimension: 0
-    - stream: 0
-      offset: 0
-      format: 0
-      dimension: 0
-    - stream: 0
-      offset: 0
-      format: 0
-      dimension: 0
-    - stream: 0
-      offset: 0
-      format: 0
-      dimension: 0
-    - stream: 0
-      offset: 0
-      format: 0
-      dimension: 0
-    - stream: 0
-      offset: 0
-      format: 0
-      dimension: 0
-    - stream: 0
-      offset: 0
-      format: 0
-      dimension: 0
-    - stream: 0
-      offset: 0
-      format: 0
-      dimension: 0
-    - stream: 0
-      offset: 0
-      format: 0
-      dimension: 0
-    m_DataSize: 128
-    _typelessdata: 000000bf0000c83e000000000000000000000000000080bf000000000000803f0000003f0000c83e000000000000000000000000000080bf0000803f0000803f0000003f0000c8be000000000000000000000000000080bf0000803f00000000000000bf0000c8be000000000000000000000000000080bf0000000000000000
-  m_CompressedMesh:
-    m_Vertices:
-      m_NumItems: 0
-      m_Range: 0
-      m_Start: 0
-      m_Data: 
-      m_BitSize: 0
-    m_UV:
-      m_NumItems: 0
-      m_Range: 0
-      m_Start: 0
-      m_Data: 
-      m_BitSize: 0
-    m_Normals:
-      m_NumItems: 0
-      m_Range: 0
-      m_Start: 0
-      m_Data: 
-      m_BitSize: 0
-    m_Tangents:
-      m_NumItems: 0
-      m_Range: 0
-      m_Start: 0
-      m_Data: 
-      m_BitSize: 0
-    m_Weights:
-      m_NumItems: 0
-      m_Data: 
-      m_BitSize: 0
-    m_NormalSigns:
-      m_NumItems: 0
-      m_Data: 
-      m_BitSize: 0
-    m_TangentSigns:
-      m_NumItems: 0
-      m_Data: 
-      m_BitSize: 0
-    m_FloatColors:
-      m_NumItems: 0
-      m_Range: 0
-      m_Start: 0
-      m_Data: 
-      m_BitSize: 0
-    m_BoneIndices:
-      m_NumItems: 0
-      m_Data: 
-      m_BitSize: 0
-    m_Triangles:
-      m_NumItems: 0
-      m_Data: 
-      m_BitSize: 0
-    m_UVInfo: 0
-  m_LocalAABB:
-    m_Center: {x: 0, y: 0, z: 0}
-    m_Extent: {x: 0.5, y: 0.390625, z: 0}
-  m_MeshUsageFlags: 0
-  m_BakedConvexCollisionMesh: 
-  m_BakedTriangleCollisionMesh: 
-  m_MeshMetrics[0]: 1
-  m_MeshMetrics[1]: 1
-  m_MeshOptimized: 0
-  m_StreamData:
-    offset: 0
-    size: 0
-    path: 
 --- !u!1 &1425681683
 GameObject:
   m_ObjectHideFlags: 0
@@ -10892,6 +10622,38 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1583424672}
   m_CullTransparentMesh: 0
+--- !u!84 &1600277206
+RenderTexture:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Overlay RenderTexture
+  m_ImageContentsHash:
+    serializedVersion: 2
+    Hash: 00000000000000000000000000000000
+  m_ForcedFallbackFormat: 4
+  m_DownscaleFallback: 0
+  m_Width: 1200
+  m_Height: 700
+  m_AntiAliasing: 1
+  m_DepthFormat: 2
+  m_ColorFormat: 7
+  m_MipMap: 0
+  m_GenerateMips: 1
+  m_SRGB: 1
+  m_UseDynamicScale: 0
+  m_BindMS: 0
+  m_TextureSettings:
+    serializedVersion: 2
+    m_FilterMode: 1
+    m_Aniso: 1
+    m_MipBias: 0
+    m_WrapU: 1
+    m_WrapV: 1
+    m_WrapW: 1
+  m_Dimension: 2
+  m_VolumeDepth: 1
 --- !u!1 &1605512017
 GameObject:
   m_ObjectHideFlags: 0
@@ -12275,6 +12037,76 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.x
       value: 1.4000015
       objectReference: {fileID: 0}
+    - target: {fileID: 114279183089075676, guid: 24bb4402c016dc34c8a7a6ba96acd7b1,
+        type: 3}
+      propertyPath: m_Options.m_Options.Array.size
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 114279183089075676, guid: 24bb4402c016dc34c8a7a6ba96acd7b1,
+        type: 3}
+      propertyPath: m_Options.m_Options.Array.data[0].m_Text
+      value: Disabled
+      objectReference: {fileID: 0}
+    - target: {fileID: 114279183089075676, guid: 24bb4402c016dc34c8a7a6ba96acd7b1,
+        type: 3}
+      propertyPath: m_Options.m_Options.Array.data[1].m_Text
+      value: Held in Hand(any)
+      objectReference: {fileID: 0}
+    - target: {fileID: 114279183089075676, guid: 24bb4402c016dc34c8a7a6ba96acd7b1,
+        type: 3}
+      propertyPath: m_Options.m_Options.Array.data[2].m_Text
+      value: Left Hand
+      objectReference: {fileID: 0}
+    - target: {fileID: 114279183089075676, guid: 24bb4402c016dc34c8a7a6ba96acd7b1,
+        type: 3}
+      propertyPath: m_Options.m_Options.Array.data[3].m_Text
+      value: Right Hand
+      objectReference: {fileID: 0}
+    - target: {fileID: 114279183089075676, guid: 24bb4402c016dc34c8a7a6ba96acd7b1,
+        type: 3}
+      propertyPath: m_Options.m_Options.Array.data[4].m_Text
+      value: Left Shoulder
+      objectReference: {fileID: 0}
+    - target: {fileID: 114279183089075676, guid: 24bb4402c016dc34c8a7a6ba96acd7b1,
+        type: 3}
+      propertyPath: m_Options.m_Options.Array.data[5].m_Text
+      value: Right Shoulder
+      objectReference: {fileID: 0}
+    - target: {fileID: 114279183089075676, guid: 24bb4402c016dc34c8a7a6ba96acd7b1,
+        type: 3}
+      propertyPath: m_Options.m_Options.Array.data[6].m_Text
+      value: Chest
+      objectReference: {fileID: 0}
+    - target: {fileID: 114279183089075676, guid: 24bb4402c016dc34c8a7a6ba96acd7b1,
+        type: 3}
+      propertyPath: m_Options.m_Options.Array.data[7].m_Text
+      value: Waist
+      objectReference: {fileID: 0}
+    - target: {fileID: 114279183089075676, guid: 24bb4402c016dc34c8a7a6ba96acd7b1,
+        type: 3}
+      propertyPath: m_Options.m_Options.Array.data[8].m_Text
+      value: Left Foot
+      objectReference: {fileID: 0}
+    - target: {fileID: 114279183089075676, guid: 24bb4402c016dc34c8a7a6ba96acd7b1,
+        type: 3}
+      propertyPath: m_Options.m_Options.Array.data[9].m_Text
+      value: Right Foot
+      objectReference: {fileID: 0}
+    - target: {fileID: 114279183089075676, guid: 24bb4402c016dc34c8a7a6ba96acd7b1,
+        type: 3}
+      propertyPath: m_Options.m_Options.Array.data[10].m_Text
+      value: Camera
+      objectReference: {fileID: 0}
+    - target: {fileID: 114279183089075676, guid: 24bb4402c016dc34c8a7a6ba96acd7b1,
+        type: 3}
+      propertyPath: m_Options.m_Options.Array.data[11].m_Text
+      value: Keyboard
+      objectReference: {fileID: 0}
+    - target: {fileID: 114907553347762944, guid: 24bb4402c016dc34c8a7a6ba96acd7b1,
+        type: 3}
+      propertyPath: m_Text
+      value: Disabled
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 24bb4402c016dc34c8a7a6ba96acd7b1, type: 3}
 --- !u!224 &1721988203 stripped
@@ -12700,12 +12532,6 @@ MonoBehaviour:
         m_CallState: 2
     m_TypeName: UnityEngine.UI.Slider+SliderEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
---- !u!4 &1790518103 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 1790518103, guid: 3fb0bb9563d44c54bb60f427d085d2f8,
-    type: 3}
-  m_PrefabInstance: {fileID: 1492526697297487661}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1791912986
 GameObject:
   m_ObjectHideFlags: 0
@@ -14472,7 +14298,7 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1983224151}
   m_CullTransparentMesh: 0
---- !u!84 &2010256860
+--- !u!84 &2008999150
 RenderTexture:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -14485,8 +14311,8 @@ RenderTexture:
   m_ForcedFallbackFormat: 4
   m_DownscaleFallback: 0
   m_Width: 1280
-  m_Height: 1000
-  m_AntiAliasing: 1
+  m_Height: 747
+  m_AntiAliasing: 8
   m_DepthFormat: 2
   m_ColorFormat: 7
   m_MipMap: 0
@@ -14496,7 +14322,7 @@ RenderTexture:
   m_BindMS: 0
   m_TextureSettings:
     serializedVersion: 2
-    m_FilterMode: 1
+    m_FilterMode: 2
     m_Aniso: 1
     m_MipBias: 0
     m_WrapU: 1
@@ -15822,100 +15648,3 @@ Camera:
     type: 3}
   m_PrefabInstance: {fileID: 1973817100}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &114769122892295440 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 114769122680349212, guid: cc5e61a2ee0969541a7d480e862e34f3,
-    type: 3}
-  m_PrefabInstance: {fileID: 1973817100}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!1001 &1492526697297487661
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 251543883}
-    m_Modifications:
-    - target: {fileID: 1790518102, guid: 3fb0bb9563d44c54bb60f427d085d2f8, type: 3}
-      propertyPath: m_Name
-      value: Tracker Overlay
-      objectReference: {fileID: 0}
-    - target: {fileID: 1790518102, guid: 3fb0bb9563d44c54bb60f427d085d2f8, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1790518103, guid: 3fb0bb9563d44c54bb60f427d085d2f8, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1790518103, guid: 3fb0bb9563d44c54bb60f427d085d2f8, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0.01
-      objectReference: {fileID: 0}
-    - target: {fileID: 1790518103, guid: 3fb0bb9563d44c54bb60f427d085d2f8, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1790518103, guid: 3fb0bb9563d44c54bb60f427d085d2f8, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0.7071068
-      objectReference: {fileID: 0}
-    - target: {fileID: 1790518103, guid: 3fb0bb9563d44c54bb60f427d085d2f8, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1790518103, guid: 3fb0bb9563d44c54bb60f427d085d2f8, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1790518103, guid: 3fb0bb9563d44c54bb60f427d085d2f8, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.7071068
-      objectReference: {fileID: 0}
-    - target: {fileID: 1790518103, guid: 3fb0bb9563d44c54bb60f427d085d2f8, type: 3}
-      propertyPath: m_RootOrder
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 1790518103, guid: 3fb0bb9563d44c54bb60f427d085d2f8, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 90
-      objectReference: {fileID: 0}
-    - target: {fileID: 1790518103, guid: 3fb0bb9563d44c54bb60f427d085d2f8, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1790518103, guid: 3fb0bb9563d44c54bb60f427d085d2f8, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1790518104, guid: 3fb0bb9563d44c54bb60f427d085d2f8, type: 3}
-      propertyPath: steamVRHandlerPrefab
-      value: 
-      objectReference: {fileID: 385247157}
-    - target: {fileID: 1790518104, guid: 3fb0bb9563d44c54bb60f427d085d2f8, type: 3}
-      propertyPath: overlayTexture
-      value: 
-      objectReference: {fileID: 2010256860}
-    - target: {fileID: 1790518104, guid: 3fb0bb9563d44c54bb60f427d085d2f8, type: 3}
-      propertyPath: cameraForTexture
-      value: 
-      objectReference: {fileID: 20652233486028394}
-    - target: {fileID: 1790518104, guid: 3fb0bb9563d44c54bb60f427d085d2f8, type: 3}
-      propertyPath: canvasText
-      value: 
-      objectReference: {fileID: 114769122892295440}
-    - target: {fileID: 1790518106, guid: 3fb0bb9563d44c54bb60f427d085d2f8, type: 3}
-      propertyPath: m_Mesh
-      value: 
-      objectReference: {fileID: 1425505625}
-    - target: {fileID: 1790518105, guid: 3fb0bb9563d44c54bb60f427d085d2f8, type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 704305738}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 3fb0bb9563d44c54bb60f427d085d2f8, type: 3}

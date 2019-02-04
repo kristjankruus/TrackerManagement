@@ -16,6 +16,9 @@ public partial class OVR_Handler
     }
     public bool OpenVRConnected { get { return (_VRSystem != null); } }
 
+    private CVRSettings _VRSettings;
+    public CVRSettings VRSettings { get { return _VRSettings; } }
+
     private CVRSystem _VRSystem;
     public CVRSystem VRSystem { get { return _VRSystem; } }
 

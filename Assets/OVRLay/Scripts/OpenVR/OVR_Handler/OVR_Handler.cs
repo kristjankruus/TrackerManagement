@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.IO;
 using System.Text;
 using UnityEngine;
 using Valve.VR;
@@ -50,6 +51,10 @@ public partial class OVR_Handler : System.IDisposable
 
         var batteryLevel = VRSystem.GetFloatTrackedDeviceProperty(deviceId, ETrackedDeviceProperty.Prop_DeviceBatteryPercentage_Float, ref error);
         return batteryLevel;
+    }
+
+    public void GetTrackersFromSettings()
+    {
     }
 
     public Dictionary<int, string> GetTrackers()

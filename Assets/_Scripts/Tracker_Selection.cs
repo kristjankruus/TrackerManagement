@@ -9,7 +9,6 @@ public class Tracker_Selection : MonoBehaviour
 
     public void SetActive()
     {
-        Debug.Log("ju");
         int counter = 0;
         foreach (var tracker in ovrHandler.GetTrackers())
         {
