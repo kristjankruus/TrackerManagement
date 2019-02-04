@@ -4,9 +4,10 @@ using UnityEngine.UI;
 public class TrackerManager_Menu_Main : MonoBehaviour
 {
     public RectTransform MainMenu;
+    public RectTransform MainMenuTitle;
     public RectTransform GeneralMenu;
     public RectTransform BatterySettingsMenu;
-    public Tracker_Selection TrackerRolesMenu;
+    public RectTransform TrackerRolesMenu;
     public RectTransform FullBodyMenu;
     public Tracker_Selection PogoPinMenu;
     [Space(10)]
@@ -29,6 +30,7 @@ public class TrackerManager_Menu_Main : MonoBehaviour
 
     private void SetMenusInactive()
     {
+        MainMenuTitle.gameObject.SetActive(true);
         GeneralMenu.gameObject.SetActive(false);
         BatterySettingsMenu.gameObject.SetActive(false);
         TrackerRolesMenu.gameObject.SetActive(false);
@@ -50,10 +52,8 @@ public class TrackerManager_Menu_Main : MonoBehaviour
     private void SetTrackerRoleSettingsActive()
     {
         SetMenusInactive();
-        TrackerRolesMenu.gameObject.SetActive(true);
-        TrackerRolesMenu.SetActive();
-        SetBackButtonActive();
-        gameObject.SetActive(false);
+        MainMenuTitle.gameObject.SetActive(false);
+        TrackerRolesMenu.gameObject.SetActive(true);        
     }
 
     private void SetFullBodySettingsActive()

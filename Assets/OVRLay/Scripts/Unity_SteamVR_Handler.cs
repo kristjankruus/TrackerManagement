@@ -1,8 +1,6 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.Events;
-
+using System.Linq;
 using Valve.VR;
 
 public class Unity_SteamVR_Handler : MonoBehaviour 
@@ -16,8 +14,11 @@ public class Unity_SteamVR_Handler : MonoBehaviour
 	public GameObject hmdObject;
 	public GameObject rightTrackerObj;
 	public GameObject leftTrackerObj;
+    public Unity_Overlay tracker;
+    public Texture overlayTexture;
+    public Camera TrackerCamera;
 
-	[Space(10)]
+    [Space(10)]
 
 	public bool autoUpdate = true;
 
@@ -42,6 +43,7 @@ public class Unity_SteamVR_Handler : MonoBehaviour
 	[HideInInspector] public OVR_Pose_Handler poseHandler { get { return ovrHandler.poseHandler; } }
 
 	private float lastSteamVRPollTime = 0f;
+    private bool notCreated = true;
 
 	void Start()
 	{
@@ -84,12 +86,24 @@ public class Unity_SteamVR_Handler : MonoBehaviour
 	{
 		if(!SteamVRStartup())
 			return;
-
+        if (notCreated)
+        {
+            foreach (var index in ovrHandler.GetTrackers().Keys)
+            {
+                var newTracker = Instantiate(tracker);
+                newTracker.steamVRHandlerPrefab = gameObject;
+                newTracker.overlayKey = $"tracker_obj_{index}";
+                newTracker.customDeviceIndex = (uint)index;
+                newTracker.overlayTexture = overlayTexture;
+                newTracker.cameraForTexture = TrackerCamera;
+            }
+            notCreated = false;
+        }
 		ovrHandler.UpdateAll();
 
 		if(hmdObject)
 			poseHandler.SetTransformToTrackedDevice(hmdObject.transform, poseHandler.hmdIndex);
-		Debug.Log(ovrHandler.VRSystem.GetControllerRoleForTrackedDeviceIndex(0));
+		// Debug.Log(ovrHandler.VRSystem.GetControllerRoleForTrackedDeviceIndex(0));
         if (poseHandler.rightActive && rightTrackerObj)
 		{
 			rightTrackerObj.SetActive(true);
